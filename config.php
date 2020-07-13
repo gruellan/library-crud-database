@@ -1,9 +1,9 @@
 <?php
 // Create credentials to scc-webtech database using PDO
-$host = "localhost";
-$username = "18usr170";
-$password = "VTILWZQQU33";
-$dbname  = "18db170"; 
+$host = "db5000645787.hosting-data.io";
+$username = "dbu237473";
+$password = "Andrew1010!!";
+$dbname  = "dbs602106"; 
 $dsn = "mysql:host=$host;dbname=$dbname"; 
 // Enable PDOException errors
 $errors = array( PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION );
