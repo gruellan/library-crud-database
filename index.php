@@ -20,7 +20,6 @@
                 <th>ISBN</th>
                 <th>Year Published</th>
                 <th>Price (£)</th>
-                <th>Added to Database</th>0
                 <th>Edit<th>
             </tr>
         </thead>
@@ -36,7 +35,6 @@
                     <td><?php echo $current["isbn"]; ?></td>
                     <td><?php echo $current["year"]; ?></td>
                     <td><?php echo $current["price"]; ?></td>
-                    <td><?php echo $current["added"]; ?></td>
                     <td><a class="icon" onclick="return confirm('Are you sure you want to delete this book?')" href="delete.php?isbn=<?= $current["isbn"]?>" ><i class="fas fa-trash delete"></i></a>
                      | <a class="icon" href="edit.php?isbn=<?= $current["isbn"]?>"><i class="fas fa-edit edit"></i></a></td>
                 </tr>
