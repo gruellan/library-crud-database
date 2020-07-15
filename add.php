@@ -73,7 +73,7 @@
         <label for="isbn">ISBN Number</label>
         <input class="form-control" type="text" name="isbn" id="isbn" required>
         <label for="price">Price</label>
-        <input class="form-control" type="text" name="price" id="price">
+        <input class="form-control" type="number" name="price" id="price" step=".01">
         <label for="year">Year</label>
         <input class="form-control" type="text" name="year" id="year">
         <input type="submit" name="submit" value="Submit">

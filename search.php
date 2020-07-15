@@ -4,7 +4,7 @@
     if (isset($_POST['submit_title'])) {
     try  {
         // Send a dynamic query to the database based on book title inputted by user
-        $sql = "SELECT * FROM Books WHERE title = :title";
+        $sql = "SELECT * FROM Books WHERE title LIKE CONCAT( '%', :title, '%')";
         $title = $_POST['title'];
         $statement = $connection->prepare($sql);
 
@@ -33,7 +33,6 @@
                     <th>ISBN</th>
                     <th>Year Published</th>
                     <th>Price (£)</th>
-                    <th>Added to Database</th>
                 </tr>
             </thead>
 
@@ -46,7 +45,6 @@
                     <td><?php echo $row["isbn"]; ?></td>
                     <td><?php echo $row["year"]; ?></td>
                     <td><?php echo $row["price"]; ?></td>
-                    <td><?php echo $row["added"]; ?></td>
                 </tr>
             <?php } ?>
             </tbody>
@@ -97,7 +95,6 @@
                     <th>ISBN</th>
                     <th>Year Published</th>
                     <th>Price (£)</th>
-                    <th>Added to Database</th>
                 </tr>
             </thead>
 
@@ -110,7 +107,6 @@
                     <td><?php echo $row["isbn"]; ?></td>
                     <td><?php echo $row["year"]; ?></td>
                     <td><?php echo $row["price"]; ?></td>
-                    <td><?php echo $row["added"]; ?></td>
                 </tr>
             <?php } ?>
             </tbody>
